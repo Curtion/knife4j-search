@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "knife4j-search",
-    "version": "0.0.0"
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -16,7 +16,16 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true,
+        "open": true,
+        "save": true
       }
+
     },
     "bundle": {
       "active": true,
@@ -27,8 +36,16 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
-      "targets": "all"
+      "identifier": "com.3gxk.knife4j",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "wix": {
+          "language": ["zh-CN", "en-US"]
+        }
+      }
     },
     "security": {
       "csp": null
@@ -40,8 +57,8 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "knife4j-search",
-        "width": 800,
+        "title": "knife4j检索",
+        "width": 1000,
         "height": 600
       }
     ]

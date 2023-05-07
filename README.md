@@ -1,7 +1,21 @@
-# Tauri + React + Typescript
+# 说明
+因为knife4j的搜索无法夸服务，无法找到想要查询的接口，因此出现此工具。
+在设置中首先设定knife4j地址，然后在搜索框中搜索接口路径、名称或者链接地址等信息会自动检索。
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+点击下方链接会自动打开接口文档网页。
 
-## Recommended IDE Setup
+# 开发
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+首先按照`tauri`需求安装环境和依赖
+然后: 
+1. `pnpm install` 安装前端依赖
+2. `pnpm run tauri dev` 启动开发环境
+3. `pnpm run tauri build` 打包成应用软件
+
+# 使用
+
+在`bin`目录下载对应系统的软件，安装即可运行。
+
+# 截图
+
+![image](/doc/1.png)
