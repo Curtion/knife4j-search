@@ -1,4 +1,5 @@
 import { Card, Space } from 'antd'
+import { WebviewWindow } from '@tauri-apps/api/window'
 
 function formatData(data: Array<ServerList>): Array<Server> {
   const url = localStorage.getItem('url')
@@ -44,11 +45,25 @@ function Content(data: Array<ServerList>, value: string) {
   }
 }
 
+function handleOpenURL(url: string) {
+  // eslint-disable-next-line no-new
+  new WebviewWindow('API', {
+    url,
+    title: 'API文档',
+    width: 1200,
+    height: 800,
+  })
+}
+
 function MyCard(data: Server) {
   return (
     <Card title={data.name} bordered={false} style={{ width: 600 }}>
       <p><span className='c-fuchsia'>{data.method}</span><span className='ml-2 c-orange'>{data.url}</span></p>
-      <a href={data.blinkURL} target='__blink'>{data.blinkURL}</a>
+      <span className='hover:cursor-pointer hover:underline c-blue'
+        onClick={() => handleOpenURL(data.blinkURL)}
+      >
+        {data.blinkURL}
+      </span>
     </Card>
   )
 }
