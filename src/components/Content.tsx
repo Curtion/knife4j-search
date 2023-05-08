@@ -11,7 +11,7 @@ function formatData(data: Array<ServerList>): Array<Server> {
         const item = value[method]
         result.push({
           name: `${item.tags[0] ?? ''}/${item.summary}`,
-          url: key,
+          url: data[i].swagger.basePath + key,
           method: method.toUpperCase(),
           blinkURL: `${url}/doc.html#/${data[i].name}/${item.tags[0] ?? ''}/${item.operationId}`,
         })
