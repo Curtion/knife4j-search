@@ -24,8 +24,12 @@
         "message": true,
         "open": true,
         "save": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": ["http://**","https://**"]
       }
-
     },
     "bundle": {
       "active": true,

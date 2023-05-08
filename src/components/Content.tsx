@@ -38,7 +38,7 @@ function Content(data: Array<ServerList>, value: string) {
   } else {
     return (
       <Space direction="vertical" size={16} className='mt-2'>
-        {result.map(item => <div key={item.url + item.method}>{MyCard(item)}</div>)}
+        {result.map(item => <div key={item.blinkURL}>{MyCard(item)}</div>)}
       </Space>
     )
   }
